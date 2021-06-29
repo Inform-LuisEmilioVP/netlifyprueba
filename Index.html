@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formulario</title>
+		<!-- Custom Icon -->
+		<link rel="icon" href="Img/Icon.png" />
+		<!-- Custom Vendor Fontawesome -->
+		<link rel="stylesheet" href="Vendor/Fontawesome/fontawesome.css" />
+		<!-- Custom Vendor Animate-->
+		<link rel="stylesheet" href="Vendor/plugins/animate.css/animate.css" />
+		<!-- Custom Vendor Sweetalert2 -->
+		<link rel="stylesheet" href="Vendor/plugins/sweetAlert2/sweetalert2.min.css" />
+		<!-- Custom Css Style -->
+		<link rel="stylesheet" href="Css/Style.css" />
+	</head>
+	<body>
+		<!-- Title Start -->
+		<div class="section_title">
+			<h1>
+				C
+				<p></p>
+			</h1>
+			<h2>ontactame</h2>
+		</div>
+		<!-- Title End -->
+
+		<!-- Contact Form Start -->
+		<section class="form_wrap">
+			<!-- Information Container Start -->
+			<section class="contact_info">
+				<section class="info_title">
+					<div class="image">
+						<img src="Img/Icon.png" alt="Image" />
+					</div>
+					<h2>Información de Contacto</h2>
+				</section>
+				<section class="info_items">
+					<p>
+						<span class="info fa fa-envelope"></span>informluisemiliovp@gmail.com
+					</p>
+					<p><span class="info fa fa-mobile-alt"></span>+1 (809) 851-9443</p>
+				</section>
+			</section>
+			<!-- Information Container End -->
+
+			<!-- Form Container Start -->
+			<form name="contact" method="POST" data-netlify="true" class="form_contact">
+				<h2>Eviar un Mensaje</h2>
+				<div class="user_info">
+					<label for="names">Nombres *</label>
+					<input type="text" name="nombre" id="names" required />
+
+					<label for="phone">Teléfono / Celular</label>
+					<input type="text" name="telefono" id="phone" />
+
+					<label for="email">Correo Electrónico *</label>
+					<input type="text" name="correo" id="email" required />
+
+					<label for="message">Mensaje *</label>
+					<textarea name="mensaje" id="message" required></textarea>
+
+					<input type="submit" class="btnSend" value="Enviar Mensaje" id="btnSend" />
+				</div>
+			</form>
+			<!-- Form Container End -->
+		</section>
+		<!-- Contact Form End -->
+		<!-- Js Main.js -->
+		<script src="Js/Main.js"></script>
+		<!-- Script Vendor Fontawesome -->
+		<script src="Vendor/Fontawesome/fontawesome.js"></script>
+		<!-- Script Vendor Sweetalert2 -->
+		<script src="Vendor/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+		<!-- Script Vendor Jquery -->
+		<script src="Vendor/jquery/jquery-3.3.1.min.js"></script>
+		<!-- Script Vendor Popper-->
+		<script src="Vendor/popper/popper.min.js"></script>
+	</body>
+</html>

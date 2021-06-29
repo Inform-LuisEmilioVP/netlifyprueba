@@ -1,0 +1,267 @@
+/* --------------------------------------------------------------- */
+/** ========== Style Gobla */
+/* --------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Mukta:wght@300;400;500;600&display=swa');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:focus {
+	outline: none;
+}
+
+body {
+	font-family: 'Mukta', sans-serif;
+	color: var(--color-text);
+	background-color: var(--bg-container);
+}
+
+:root {
+	--bg-container: #19181a;
+	--bg-contact-info: #232123;
+	--bg-form: #010001;
+	--color-text: #f9f7f9;
+	--bg-element: #a71a1d;
+	--bg-label: #606060;
+}
+
+/* --------------------------------------------------------------- */
+/** ========== Formulario */
+/* --------------------------------------------------------------- */
+.section_title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	margin-top: 20px;
+}
+
+.section_title h1 {
+	font-size: 50px;
+	color: var(--bg-element);
+	font-family: 'Dela Gothic One', cursive;
+}
+
+.section_title h2 {
+	font-size: 30px;
+	font-family: 'Dela Gothic One', cursive;
+}
+
+.form_wrap {
+	width: 1050px;
+	height: 620px;
+	margin: 20px auto;
+	display: flex;
+	background-color: var(--bg-contact-info);
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
+	overflow: hidden;
+}
+
+/* ------ Informacion de Contacto ------ */
+.contact_info::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--bg-form);
+	opacity: 0.8;
+}
+
+.contact_info {
+	width: 38%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../Img/Fondo-form.jpg);
+	background-size: cover;
+	background-position: center center;
+}
+
+.info_title,
+.info_items {
+	position: relative;
+	z-index: 2;
+}
+
+.info_title {
+	margin-bottom: 120px;
+}
+
+.info_title .image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.info_title img {
+	width: 150px;
+	background-position: center;
+	margin-bottom: 5px;
+}
+
+.info_title h2 {
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Dela Gothic One', cursive;
+}
+
+.info_items p {
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.info_items p:nth-child(1) .info {
+	font-size: 25px;
+	margin-right: 10px;
+	color: var(--bg-element);
+}
+
+.info_items p:nth-child(2) .info {
+	font-size: 30px;
+	margin-right: 15px;
+	margin-left: 4px;
+	color: var(--bg-element);
+}
+
+/* ------ Formulario de Contacto ----- */
+form.form_contact {
+	width: 62%;
+	padding: 30px 40px;
+}
+
+form.form_contact h2 {
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+
+form.form_contact .user_info {
+	display: flex;
+	flex-direction: column;
+}
+
+form.form_contact label {
+	font-weight: 600;
+}
+
+form.form_contact input,
+form.form_contact textarea {
+	width: 100%;
+	padding: 8px 0px 5px;
+	margin-bottom: 25px;
+	background-color: var(--bg-contact-info);
+	border: none;
+	border-bottom: 2px solid var(--bg-label);
+	font-family: 'Mukta', sans-serif;
+	font-size: 15px;
+	color: var(--color-text);
+	font-weight: 400;
+	font-size: 17px;
+}
+
+form.form_contact textarea {
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 90px;
+}
+
+form.form_contact .btnSend {
+	width: 180px;
+	padding: 10px;
+	border: none;
+	border-radius: 25px;
+	background-color: var(--bg-element);
+	align-self: flex-end;
+	margin-top: 15px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+form.form_contact .btnSend:hover {
+	background-color: var(--bg-container);
+	box-shadow: 0px 0px 3px var(--bg-element);
+}
+
+/* ----- Warning window ----- */
+.modal_wrap {
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.25);
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+.message_modal {
+	width: 400px;
+	padding: 30px 20px 15px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+	background-color: var(--bg-contact-info);
+}
+
+.message_modal h3 {
+	text-align: center;
+	font-size: 25px;
+	font-weight: 400;
+	color: var(--bg-element);
+}
+
+.message_modal h3::after {
+	content: '';
+	display: block;
+	height: 1px;
+	background-color: #c5c5c5;
+	margin: 10px 0px 15px;
+}
+
+.message_modal p {
+	font-size: 16px;
+	color: var(--bg-label);
+	font-weight: 500;
+}
+
+.message_modal p .info {
+	margin-right: 8px;
+	color: var(--bg-element);
+}
+
+.regrsar {
+	width: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+
+.regrsar a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 30px;
+	text-decoration: none;
+	background-color: var(--bg-element);
+	color: var(--color-text);
+	cursor: pointer;
+}
+
+.regrsar a:hover {
+	background-color: var(--bg-container);
+	box-shadow: 0px 0px 3px var(--bg-element);
+}
